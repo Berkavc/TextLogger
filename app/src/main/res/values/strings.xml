@@ -1,10 +1,3 @@
 <resources>
     <string name="app_name">TextLogger</string>
-    <string name="custom_snackbar_title">You can activate Text Logger by shaking your device</string>
-    <string name="dummy_log_title">2022-06-07 16:12:48.651 8824-8837/? W/.gms.persisten: Reducing the number of considered missed Gc histogram windows from 188 to 100
-2022-06-07 16:12:48.661 8824-17572/? I/NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.tapandpay.gcmtask.TapAndPayGcmTaskService started execution. cause:4 exec_start_elapsed_seconds: 33627 [CONTEXT service_id=218 ]
-2022-06-07 16:12:48.663 8824-17572/? I/NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.tapandpay.gcmtask.TapAndPayGcmTaskService finished executing. cause:4 result: 3 elapsed_millis: 76 uptime_millis: 76 exec_start_elapsed_seconds: 33627 [CONTEXT service_id=218 ]
-2022-06-07 16:12:48.749 8824-18863/? I/NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.clearcut.uploader.QosUploaderService started execution. cause:5 exec_start_elapsed_seconds: 33627 [CONTEXT service_id=218 ]
-2022-06-07 16:12:48.792 8824-19175/? I/NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.clearcut.uploader.QosUploaderService started execution. cause:5 exec_start_elapsed_seconds: 33627 [CONTEXT service_id=218 ]
-2022-06-07 16:12:48.838 8824-18863/? I/NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.clearcut.uploader.QosUploaderService finished executing. cause:5 result: 1 elapsed_millis: 118 uptime_millis: 118</string>
 </resources>
