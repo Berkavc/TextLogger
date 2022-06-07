@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayoutSnackBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="top"
+    android:background="@drawable/bg_snack_bar_default_label"
+    android:elevation="10dp"
+    android:padding="18dp"
+    android:layout_marginTop="50dp"
+    android:layout_marginHorizontal="16dp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewSnackBarMessage"
+        style="@style/defaultTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/_roboto_400"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:layout_marginEnd="5dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/lottieSnackBarWarning"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="You can activate Text Logger by shaking your device">
+    </androidx.appcompat.widget.AppCompatTextView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieSnackBarWarning"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textViewSnackBarMessage"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/text_logger_warning" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
