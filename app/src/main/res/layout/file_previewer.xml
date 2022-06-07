@@ -70,6 +70,7 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textViewFilePreviewerLog"
             style="@style/defaultTextView"
+            android:textSize="11sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="5dp"
