@@ -56,6 +56,10 @@ class FilePreviewer : ConstraintLayout {
 
             binding.textViewFilePreviewerLog.text = saveLog().toString()
 
+            binding.imageViewFilePreviewerClose.clickWithThrottle {
+                clearView()
+            }
+
             binding.imageViewFilePreviewerSave.clickWithThrottle {
                 binding.constraintLayoutFilePreviewerProgressBar.visibility = View.VISIBLE
                 val coroutineCallLogger = CoroutineScope(Dispatchers.IO)
