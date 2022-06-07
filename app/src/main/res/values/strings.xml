@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TextLogger</string>
+    <string name="custom_snackbar_title">You can activate Text Logger by shaking your device</string>
+    <string name="file_previewer_save_success">File saved successfully to \n %1$s</string>
 </resources>

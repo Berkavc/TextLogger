@@ -63,21 +63,39 @@
         android:id="@+id/scrollViewFilePreviewer"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="@id/guideline_1"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_4"
         app:layout_constraintEnd_toEndOf="@id/guideline_2"
-        app:layout_constraintTop_toTopOf="@id/guideline_3"
-        app:layout_constraintBottom_toBottomOf="@id/guideline_4">
+        app:layout_constraintStart_toStartOf="@id/guideline_1"
+        app:layout_constraintTop_toTopOf="@id/guideline_3">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textViewFilePreviewerLog"
+            style="@style/defaultTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/defaultTextView"
-            android:textColor="@color/white"
-            android:layout_marginVertical="5dp">
+            android:layout_marginVertical="5dp"
+            android:textColor="@color/white">
         </androidx.appcompat.widget.AppCompatTextView>
 
     </ScrollView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutFilePreviewerProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </ProgressBar>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
