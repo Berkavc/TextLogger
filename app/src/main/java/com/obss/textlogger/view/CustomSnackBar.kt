@@ -31,7 +31,7 @@ class CustomSnackBar : ConstraintLayout {
 
     private var coroutineCallCountDown: CoroutineScope? = CoroutineScope(Dispatchers.IO)
 
-    private var countDown: Long = 2000L
+    private var countDown: Long = 7000L
 
     internal fun initSnackBar(view: View, title: String? = null, animationResource: Int? = null) {
         view.let {

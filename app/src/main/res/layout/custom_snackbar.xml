@@ -40,7 +40,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/textViewSnackBarMessage"
-        app:lottie_autoPlay="false"
+        app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/text_logger_warning" />
 

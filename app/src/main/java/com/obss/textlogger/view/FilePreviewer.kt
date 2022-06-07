@@ -41,7 +41,7 @@ class FilePreviewer : ConstraintLayout {
     private var view: View? = null
     private val layoutInflater = LayoutInflater.from(context)
 
-    private var stringBuilderLog: StringBuilder = StringBuilder()
+    private var stringBuilderLog: StringBuilder = saveLog()
 
     private var stringBuilderDefault: StringBuilder = StringBuilder()
 
@@ -54,7 +54,7 @@ class FilePreviewer : ConstraintLayout {
 
             binding.constraintLayoutFilePreviewerProgressBar.visibility = View.GONE
 
-            binding.textViewFilePreviewerLog.text = saveLog().toString()
+            binding.textViewFilePreviewerLog.text = stringBuilderLog.toString()
 
             binding.imageViewFilePreviewerClose.clickWithThrottle {
                 clearView()
@@ -105,7 +105,7 @@ class FilePreviewer : ConstraintLayout {
         if (!filePath.exists()) {
             filePath.createNewFile()
             takeDeviceInformationDetails(context)
-            stringBuilderDefault.append(saveLog())
+            stringBuilderDefault.append(stringBuilderLog)
             filePath.appendText(
                 stringBuilderDefault.toString()
             )
@@ -201,11 +201,12 @@ class FilePreviewer : ConstraintLayout {
 
     private fun saveLog() : StringBuilder{
         stringBuilderLog = StringBuilder()
-        val process = Runtime.getRuntime().exec("logcat -d")
+        val command = String.format("logcat -d -v threadtime *:*")
+        val process = Runtime.getRuntime().exec(command)
         val bufferedReader = BufferedReader(InputStreamReader(process.inputStream))
         var line: String?
         while (bufferedReader.readLine().also { line = it } != null) {
-            stringBuilderLog.append(line)
+            stringBuilderLog.append(line).append("\n")
         }
         return stringBuilderLog
     }
