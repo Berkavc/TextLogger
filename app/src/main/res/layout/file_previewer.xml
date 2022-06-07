@@ -61,11 +61,10 @@
 
     <ScrollView
         android:id="@+id/scrollViewFilePreviewer"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginHorizontal="5dp"
         app:layout_constraintBottom_toBottomOf="@id/guideline_4"
-        app:layout_constraintEnd_toEndOf="@id/guideline_2"
-        app:layout_constraintStart_toStartOf="@id/guideline_1"
         app:layout_constraintTop_toTopOf="@id/guideline_3">
 
         <androidx.appcompat.widget.AppCompatTextView
