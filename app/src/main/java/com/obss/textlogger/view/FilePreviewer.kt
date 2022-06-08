@@ -201,7 +201,7 @@ class FilePreviewer : ConstraintLayout {
 
     private fun saveLog() : StringBuilder{
         stringBuilderLog = StringBuilder()
-        val command = String.format("logcat -d -v threadtime *:*")
+        val command = String.format("logcat -e threadtime *:*")
         val process = Runtime.getRuntime().exec(command)
         val bufferedReader = BufferedReader(InputStreamReader(process.inputStream))
         var line: String?
